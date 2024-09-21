@@ -2,6 +2,7 @@ import Bento from "./_Components/Bento";
 import Explore from "./_Components/Explore";
 import Hero from "./_Components/Hero";
 import Navbar from "./_Components/Navbar";
+import News from "./_Components/News";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
       <div className="w-full h-auto z-10 relative mt-[100vh] bg-background">
         <Navbar />
         <Explore />
-        <Bento />
+        <News />
+        
+        {/* <Bento /> */}
       </div>
     </div>
   );
