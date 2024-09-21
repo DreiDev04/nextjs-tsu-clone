@@ -37,6 +37,7 @@ const Hero = () => {
           preload="none"
           autoPlay
           muted
+          loop
         >
           <source src={process.env.NEXT_PUBLIC_VIDEO_LINK} type="video/mp4" />
         </video>
