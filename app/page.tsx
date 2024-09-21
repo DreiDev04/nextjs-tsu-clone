@@ -1,4 +1,5 @@
 import Bento from "./_Components/Bento";
+import CampusNews from "./_Components/CampusNews";
 import Explore from "./_Components/Explore";
 import Hero from "./_Components/Hero";
 import Navbar from "./_Components/Navbar";
@@ -15,7 +16,7 @@ export default function Home() {
         <Navbar />
         <Explore />
         <News />
-        
+        <CampusNews />
         {/* <Bento /> */}
       </div>
     </div>
