@@ -5,6 +5,7 @@ import Hero from "./_Components/Hero";
 import Navbar from "./_Components/Navbar";
 import News from "./_Components/News";
 import Announcement from "./_Components/Announcement";
+import Footer from "./_Components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CampusNews />
         <Announcement />
         <Bento />
+        <Footer />
       </div>
     </div>
   );

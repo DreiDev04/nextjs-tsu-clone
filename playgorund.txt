@@ -1,0 +1,13 @@
+[
+  "https://www.tsu.edu.ph/privacy/data-privacy-notice/",
+  "www.foi.gov.ph/",
+  "https://www.tsu.edu.ph/good-governance/transparency-seal/",
+  "https://www.tsu.edu.ph/good-governance/citizen-s-charter/",
+  "https://www.tsu.edu.ph/opportunities/bid-opportunities/",
+  "https://www.tsu.edu.ph/publications/",
+  "https://imoc.tsu.edu.ph/",
+  "https://www.tsu.edu.ph/opportunities/job-opening/",
+  "https://www.tsu.edu.ph/contact-us/telephone-directory/",
+  "https://www.tsu.edu.ph/news/",
+  "https://www.tsu.edu.ph/downloads/for-faculty-and-personnel/"
+]
