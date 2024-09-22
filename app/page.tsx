@@ -4,6 +4,7 @@ import Explore from "./_Components/Explore";
 import Hero from "./_Components/Hero";
 import Navbar from "./_Components/Navbar";
 import News from "./_Components/News";
+import Announcement from "./_Components/Announcement";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
         <Explore />
         <News />
         <CampusNews />
-        {/* <Bento /> */}
+        <Announcement />
+        <Bento />
       </div>
     </div>
   );

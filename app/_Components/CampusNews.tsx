@@ -4,7 +4,7 @@ import React from "react";
 
 const CampusNews = () => {
   return (
-    <div className="min-h-screen bg-white text-gray-900 p-10">
+    <div className="min-h-screen bg-background text-foreground p-10">
       <h1 className="text-5xl font-serif mb-8 text-center text-red-800">
         Campus News
       </h1>
@@ -17,9 +17,9 @@ const CampusNews = () => {
         ))}
       </div>
       <div className="flex justify-center mt-10">
-        <Button className="font-bold" size={"lg"}>
-          More News
-        </Button>
+        <button className="text-lg font-semibold text-red-800 border border-red-800 hover:bg-red-800 hover:text-white transition-colors duration-300 px-6 py-2 rounded-lg">
+          Read More
+        </button>
       </div>
     </div>
   );
@@ -34,7 +34,7 @@ interface News {
 
 const NewsCard = ({ news }: { news: News }) => {
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:scale-105 hover:bg-gray-50 transition-all duration-300">
+    <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:scale-105 hover:bg-grays transition-all duration-300">
       <div className="h-48 relative">
         <Image
           src={news.image}
