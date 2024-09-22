@@ -16,7 +16,7 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = ({ href, text, icon }) => {
   return (
     <a href={href} className="block hover:text-secondary hover:underline">
-      {text} {icon && <span className="inline-block text-sm">{icon}</span>}
+      {text} {icon && <span className="inline-block text-xs">{icon}</span>}
     </a>
   );
 };
@@ -403,7 +403,7 @@ const NavbarIn: React.FC<NavbarInProps> = ({ toggleMenu }) => {
           {navLinks.map((link) => (
             <a
               key={link.name}
-              className="block py-2 px-4 hover:underline text-xl md:text-6xl font-times cursor-pointer"
+              className="block md:py-2 py-1 md:px-4 px-2 hover:underline text-lg md:text-6xl font-times cursor-pointer"
               onClick={() => handleLinkClick(link.name)}
             >
               {link.name}

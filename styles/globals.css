@@ -49,7 +49,7 @@ html {
     @apply bg-background text-foreground;
   }
   .innerh1{
-    @apply text-3xl font-bold;
+    @apply md:text-3xl font-bold text-xl;
   }
 }
 
