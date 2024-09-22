@@ -45,7 +45,7 @@ const Hero = () => {
           muted
           loop
         >
-          <source src={process.env.NEXT_PUBLIC_VIDEO_LINK} type="video/mp4" />
+          <source src={"https://cs50-tindahan.s3.ap-southeast-2.amazonaws.com/Personal/tsu-web/TSU-PROFILE.mp4"} type="video/mp4" />
         </video>
         <div className="absolute bottom-4 right-4 z-40 flex space-x-2">
           <button onClick={handlePlayPause} className="p-2 text-background hover:text-primary">

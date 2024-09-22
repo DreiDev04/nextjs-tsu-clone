@@ -1,8 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    VIDEO_LINK: 'https://s3.amazonaws.com/your-bucket-name/your-video-file.mp4'
-  }
+  async headers() {
+    return [
+      {
+        source: '/Personal/tsu-web/TSU-PROFILE.mp4',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
