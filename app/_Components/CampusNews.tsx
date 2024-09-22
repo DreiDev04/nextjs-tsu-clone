@@ -1,6 +1,8 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const CampusNews = () => {
   return (
@@ -11,9 +13,7 @@ const CampusNews = () => {
       <hr className="border-b-2 border-gray-300 mb-8" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {CampusNewsList.map((news, index) => (
-          <div key={index} className="col-span-1">
-            <NewsCard news={news} />
-          </div>
+          <AnimatedNewsCard key={index} news={news} index={index} />
         ))}
       </div>
       <div className="flex justify-center mt-10">
@@ -31,6 +31,23 @@ interface News {
   description: string;
   image: string;
 }
+
+const AnimatedNewsCard = ({ news, index }: { news: News; index: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="col-span-1"
+    >
+      <NewsCard news={news} />
+    </motion.div>
+  );
+};
 
 const NewsCard = ({ news }: { news: News }) => {
   return (

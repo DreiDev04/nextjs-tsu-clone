@@ -1,5 +1,7 @@
+"use client"
 import { ArrowUpRight } from "lucide-react";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 interface NavbarInProps {
   toggleMenu: () => void;
@@ -383,7 +385,13 @@ const NavbarIn: React.FC<NavbarInProps> = ({ toggleMenu }) => {
   )?.content;
 
   return (
-    <div className="fixed inset-0 bg-foreground bg-opacity-80 z-50 flex items-center px-5 py-16">
+    <motion.div
+      className="fixed inset-0 bg-foreground bg-opacity-80 z-50 flex items-center px-5 py-16"
+      initial={{ opacity: 0, y: "-100%" }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: "-100%" }}
+      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+    >
       <button
         className="absolute top-0 right-0 text-background text-5xl hover:bg-primary cursor-pointer h-28 w-32 flex items-center justify-center"
         onClick={toggleMenu}
@@ -391,7 +399,7 @@ const NavbarIn: React.FC<NavbarInProps> = ({ toggleMenu }) => {
         &times;
       </button>
       <nav className="text-background grid grid-cols-3 w-full h-full overflow-auto">
-        <div className="col-span-1 max-h-full overflow-auto">
+        <div className="col-span-1 max-h-full overflow-auto  border-r-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -406,7 +414,7 @@ const NavbarIn: React.FC<NavbarInProps> = ({ toggleMenu }) => {
           {selectedContent}
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 };
 

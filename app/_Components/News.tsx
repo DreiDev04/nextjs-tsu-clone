@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -14,22 +15,21 @@ import {
   ArrowRightCircle,
   Ghost,
 } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 
 const News = () => {
   return (
     <div className="h-screen w-full bg-foreground text-background p-10 md:px-16 flex md:flex-row flex-col items-center justify-center gap-5">
       <div className="flex flex-col md:text-2xl text-xl font-semibold space-y-4 md:space-y-6">
-        <h1 className="leading-tight">
-          <span className="text-5xl text-red-900">T </span>ruth in words, action
-          and character
-        </h1>
-        <h1 className="leading-tight">
-          <span className="text-5xl text-red-900">S </span>ervice with
-          excellence and compassion
-        </h1>
-        <h1 className="leading-tight">
-          <span className="text-5xl text-red-900">U </span>nity in diversity
-        </h1>
+        <AnimatedHeading
+          text="Truth in words, action and character"
+          index={0}
+        />
+        <AnimatedHeading
+          text="Service with excellence and compassion"
+          index={1}
+        />
+        <AnimatedHeading text="Unity in diversity" index={2} />
       </div>
 
       <div className="relative w-full h-full grid items-center justify-center mt-10 md:mt-0">
@@ -53,6 +53,27 @@ const News = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const AnimatedHeading = ({ text, index }: any) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const firstLetter = text.charAt(0);
+  const restOfText = text.slice(1);
+
+  return (
+    <motion.h1
+      ref={ref}
+      className="leading-tight"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <span className="text-5xl text-red-900">{firstLetter}</span>
+      {restOfText}
+    </motion.h1>
   );
 };
 
