@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const Announcement = () => {
   return (
     <div className="min-h-screen bg-background text-foregorund p-10">
-      <h1 className="text-5xl font-serif mb-8 text-center text-red-800">
+      <h1 className="md:text-5xl text-4xl font-serif mb-8 text-center text-red-800">
         Announcements
       </h1>
       <hr className="border-b-2 border-gray-300 mb-8" />

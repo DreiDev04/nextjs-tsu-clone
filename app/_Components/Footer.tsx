@@ -19,7 +19,7 @@ const Footer = () => {
             alt="Tarlac State University Logo"
           />
           <h1 className="text-2xl font-semibold mt-2 text-center md:text-left ml-5">
-            Tarlac State <br /> University
+            Tarlac State <br className="hidden md:block" /> University
           </h1>
         </div>
         <div>
@@ -173,7 +173,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t border-gray-600 mt-8 pt-4 text-center text-lg">
+      <div className="border-t border-gray-600 mt-8 pt-4 text-center text-lg" >
         <p>&copy; 2024 Tarlac State University. All rights reserved.</p>
         <div className="text-sm mt-2 space-x-4 text-secondary">
           <Link

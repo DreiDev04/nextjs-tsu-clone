@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 const Explore = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center flex-col">
-      <h1 className="text-2xl font-extralight">EXPLORE AND SOAR HIGHER </h1>
+      <h1 className="md:text-2xl text:xl font-extralight">EXPLORE AND SOAR HIGHER </h1>
       <div className="flex flex-col mt-10 gap-4 mb-20">
         {exploreItem.map((item, index) => (
           <AnimatedLink key={index} href={item.link} title={item.title} index={index} />
@@ -36,7 +36,7 @@ const AnimatedLink = ({ href, title, index }: AnimatedLinkProps) => {
     >
       <Link
         href={href}
-        className="text-6xl text-center flex justify-center items-center hover:text-primary hover:translate-x-2 transition-transform "
+        className="md:text-6xl text-3xl text-center flex justify-center items-center hover:text-primary hover:translate-x-2 transition-transform "
       >
         {title}
         <span>
