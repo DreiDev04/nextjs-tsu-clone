@@ -45,6 +45,9 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+  .innerh1{
+    @apply text-3xl font-bold;
+  }
 }
 
 
