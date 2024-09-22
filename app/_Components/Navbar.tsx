@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="flex justify-center items-center gap-2 ml-10">
         <Image
           src="/logo/tsu-logo.webp"
-          width={100} 
+          width={100}
           height={100}
           alt="tsu-logo"
           className="h-12 w-12 md:h-20 md:w-20"
@@ -44,16 +44,15 @@ const Navbar = () => {
           Tarlac State <br className="hidden md:block" /> University
         </h1>
       </div>
-      <div className="flex h-full bg-primary ">
-
-      <div className="flex items-center justify-center gap-4 px-5">
-        <Search className="h-8 w-8 text-background" />
-        <span className="text-background">Search</span>
-      </div>
-      <div className="flex items-center justify-center gap-4 px-5">
-        <Menu className="h-8 w-8 text-background" />
-        <span className="text-background">Menu</span>
-      </div>
+      <div className="flex h-full bg-foreground ">
+        <div className="flex items-center justify-center gap-4 px-5 hover:bg-primary cursor-pointer">
+          <Search className="h-8 w-8 text-background" />
+          <span className="text-background">Search</span>
+        </div>
+        <div className="flex items-center justify-center gap-4 px-5 hover:bg-primary cursor-pointer">
+          <Menu className="h-8 w-8 text-background" />
+          <span className="text-background">Menu</span>
+        </div>
       </div>
     </nav>
   );
