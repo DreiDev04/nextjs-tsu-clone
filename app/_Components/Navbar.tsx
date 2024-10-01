@@ -36,7 +36,7 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 w-full transition-transform duration-300 ${
           showNav ? "translate-y-0" : "-translate-y-full"
-        } md:h-28 h-16 flex bg-tranparent items-center justify-between z-50 `}
+        } md:h-28 h-16 flex bg-tranparent items-center justify-between z-50  `}
       >
         <div className="flex justify-center items-center gap-2 ml-10">
           <Image
@@ -46,7 +46,7 @@ const Navbar = () => {
             alt="tsu-logo"
             className="h-12 w-12 md:h-20 md:w-20"
           />
-          <h1 className="text-lg md:text-2xl text-foreground font-times  text-white md:block hidden">
+          <h1 className="text-lg md:text-2xl text-background font-times md:block hidden">
             Tarlac State <br className="hidden md:block" /> University
           </h1>
         </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {isMenuOpen && <NavbarIn  toggleMenu={toggleMenu}/>}
+      {isMenuOpen && <NavbarIn toggleMenu={toggleMenu} />}
     </>
   );
 };

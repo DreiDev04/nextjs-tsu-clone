@@ -1,21 +1,14 @@
 "use client";
 import React, { useRef } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowLeftCircle,
-  ArrowRight,
-  ArrowRightCircle,
-  Ghost,
-} from "lucide-react";
+import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+
+interface AnimatedHeadingProps {
+  text: string;
+  index: number;
+}
 
 const News = () => {
   return (
@@ -33,13 +26,12 @@ const News = () => {
       </div>
 
       <div className="relative w-full h-full grid items-center justify-center mt-10 md:mt-0">
-        <div className="absolute inset-0 bg-foreground to-transparent opacity-50 rounded-lg"></div>
+        <div className="absolute  rounded-lg"></div>
         <Image
           src="/news/flash/blep-aug-2024.webp"
-          alt="Tsu Flash"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="center"
+          alt="Tsu Flash August 2024"
+          width={800}
+          height={800}
           className="rounded-lg"
         />
         <div className="absolute bottom-0 right-0 p-5 flex gap-2">
@@ -56,7 +48,7 @@ const News = () => {
   );
 };
 
-const AnimatedHeading = ({ text, index }: any) => {
+const AnimatedHeading = ({ text, index }: AnimatedHeadingProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

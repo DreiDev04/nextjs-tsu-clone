@@ -56,9 +56,9 @@ const NewsCard = ({ news }: { news: News }) => {
         <Image
           src={news.image}
           alt={news.title}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          width={800}
+          height={800}
+          
         />
       </div>
       <div className="p-10">

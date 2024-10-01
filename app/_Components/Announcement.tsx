@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Announcement = () => {
   return (
-    <div className="min-h-screen bg-background text-foregorund p-10">
+        <div className="min-h-screen bg-background text-foreground p-10">
       <h1 className="md:text-5xl text-4xl font-serif mb-8 text-center text-red-800">
         Announcements
       </h1>
@@ -15,15 +15,14 @@ const Announcement = () => {
         {announcementList.map((announcement, index) => (
           <div
             key={index}
-            className="bg-background border border-gray-200 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl "
+            className="bg-background border border-gray-200 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-xl"
           >
             <div className="relative h-48 md:h-64">
               <Image
                 src={announcement.image}
-                alt={announcement.title}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
+                alt={`Image for ${announcement.title}`}
+                width={800}
+                height={800}
               />
             </div>
             <div className="p-6">
