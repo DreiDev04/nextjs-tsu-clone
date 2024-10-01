@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, Search } from "lucide-react";
 import Image from "next/image";
 import NavbarIn from "./NavbarIn";
+import React from "react";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(true);

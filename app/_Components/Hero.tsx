@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { CirclePause, CirclePlay, VolumeOff, Volume2 } from "lucide-react";
 import React, { useRef, useEffect, useState } from "react";
 
@@ -10,7 +9,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.volume = 0.5; // Set initial volume to 50%
+      videoRef.current.volume = 0.5; 
     }
   }, []);
 
@@ -42,7 +41,7 @@ const Hero = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
           preload="none"
           autoPlay
-          muted
+          
           loop
         >
           <source src={"https://cs50-tindahan.s3.ap-southeast-2.amazonaws.com/Personal/tsu-web/TSU-PROFILE.mp4"} type="video/mp4" />
