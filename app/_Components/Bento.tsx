@@ -6,11 +6,6 @@ import Link from "next/link";
 const Bento = () => {
   return (
     <div className="bg-foreground md:p-20 p-8 text-background">
-      {/* <h1 className="text-4xl font-bold text-center mx-10">
-        Explore TSU
-      </h1>
-      <hr className="border-t-1 border-black mb-32" /> */}
-
       <div className=" grid md:grid-cols-3 md:gap-10 gap-5 hover:cursor-pointer">
         {bentoItem.map((item, index) => (
           <div key={index} className="border rounded-xl overflow-hidden">

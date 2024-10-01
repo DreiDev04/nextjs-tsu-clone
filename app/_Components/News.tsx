@@ -25,16 +25,15 @@ const News = () => {
         <AnimatedHeading text="Unity in diversity" index={2} />
       </div>
 
-      <div className="relative w-full h-full grid items-center justify-center mt-10 md:mt-0">
-        <div className="absolute  rounded-lg"></div>
+      <div className="relative w-full h-full grid items-center justify-center">
         <Image
           src="/news/flash/blep-aug-2024.webp"
           alt="Tsu Flash August 2024"
           width={800}
           height={800}
-          className="rounded-lg"
+          className="rounded-lg object-cover w-full h-full"
         />
-        <div className="absolute bottom-0 right-0 p-5 flex gap-2">
+        <div className="flex justify-end items-end w-full h-full p-5 gap-2 text-white">
           <p className="items-center flex">Slide 1 of 5</p>
           <Button variant="ghost">
             <ArrowLeftCircle />

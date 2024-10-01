@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 const Announcement = () => {
   return (
-        <div className="min-h-screen bg-background text-foreground p-10">
+    <div className="min-h-screen bg-background text-foreground p-10">
       <h1 className="md:text-5xl text-4xl font-serif mb-8 text-center text-red-800">
         Announcements
       </h1>
@@ -21,8 +21,9 @@ const Announcement = () => {
               <Image
                 src={announcement.image}
                 alt={`Image for ${announcement.title}`}
-                width={800}
-                height={800}
+                width={500}
+                height={500}
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="p-6">

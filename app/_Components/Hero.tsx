@@ -9,7 +9,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.volume = 0.5; 
+      videoRef.current.volume = 0.5;
     }
   }, []);
 
@@ -41,8 +41,8 @@ const Hero = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
           preload="none"
           autoPlay
-          
           loop
+          muted={isMuted}
         >
           <source src={"https://cs50-tindahan.s3.ap-southeast-2.amazonaws.com/Personal/tsu-web/TSU-PROFILE.mp4"} type="video/mp4" />
         </video>

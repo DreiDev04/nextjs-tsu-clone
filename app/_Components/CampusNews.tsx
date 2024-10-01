@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React, { useRef } from "react";
@@ -52,15 +52,14 @@ const AnimatedNewsCard = ({ news, index }: { news: News; index: number }) => {
 const NewsCard = ({ news }: { news: News }) => {
   return (
     <div className="border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:scale-105 hover:bg-grays transition-all duration-300">
-      <div className="h-48 relative">
-        <Image
-          src={news.image}
-          alt={news.title}
-          width={800}
-          height={800}
-          
-        />
-      </div>
+      <Image
+        src={news.image}
+        alt={news.title}
+        width={500}
+        height={500}
+        className=" object-cover"
+      />
+
       <div className="p-10">
         <h2 className="text-xl font-serif font-bold mb-2 text-red-800">
           {news.title}
